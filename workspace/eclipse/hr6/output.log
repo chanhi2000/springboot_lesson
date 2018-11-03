@@ -1,0 +1,42 @@
+2018-11-03 15:37:15,397 DEBUG [main] hr6.UserDao       ( UserDao.java:44)     - sql:
+INSERT INTO users (u_id, name, password) VALUES (?,?,?) 
+
+2018-11-03 15:37:15,460 DEBUG [main] hr6.UserDao       ( UserDao.java:54)     - flag:
+1
+2018-11-03 15:37:15,494 DEBUG [main] hr6.UserDao       ( UserDao.java:74)     - sql:
+SELECT * FROM users WHERE u_id = ? 
+
+2018-11-03 15:37:15,505 DEBUG [main] hr6.UserDao       ( UserDao.java:93)     - user:
+User [u_id=mmmark_110, name=이찬희, password=1224]
+2018-11-03 15:37:15,507 DEBUG [main] hr6.Main          (    Main.java:37)     - ===================================
+2018-11-03 15:37:15,507 DEBUG [main] hr6.Main          (    Main.java:38)     - 등록 성공
+2018-11-03 15:37:15,509 DEBUG [main] hr6.Main          (    Main.java:39)     - ===================================
+2018-11-03 15:37:15,528 DEBUG [main] hr6.UserDao       ( UserDao.java:115)     - sql:
+DELETE FROM users WHERE u_id = ? 
+
+2018-11-03 15:37:15,530 DEBUG [main] hr6.UserDao       ( UserDao.java:123)     - flag:
+1
+2018-11-03 15:37:15,531 DEBUG [main] hr6.Main          (    Main.java:51)     - ===================================
+2018-11-03 15:37:15,532 DEBUG [main] hr6.Main          (    Main.java:52)     - 제거 성공 del result=1
+2018-11-03 15:37:15,532 DEBUG [main] hr6.Main          (    Main.java:53)     - ===================================
+2018-11-03 15:41:58,000 DEBUG [main] hr6.UserDao       ( UserDao.java:44)     - sql:
+INSERT INTO users (u_id, name, password) VALUES (?,?,?) 
+
+2018-11-03 15:41:58,095 DEBUG [main] hr6.UserDao       ( UserDao.java:54)     - flag:
+1
+2018-11-03 15:41:58,120 DEBUG [main] hr6.UserDao       ( UserDao.java:74)     - sql:
+SELECT * FROM users WHERE u_id = ? 
+
+2018-11-03 15:41:58,132 DEBUG [main] hr6.UserDao       ( UserDao.java:93)     - user:
+User [u_id=mmmark_110, name=이찬희, password=1224]
+2018-11-03 15:41:58,133 DEBUG [main] hr6.Main          (    Main.java:37)     - ===================================
+2018-11-03 15:41:58,134 DEBUG [main] hr6.Main          (    Main.java:38)     - 등록 성공
+2018-11-03 15:41:58,135 DEBUG [main] hr6.Main          (    Main.java:39)     - ===================================
+2018-11-03 15:41:58,154 DEBUG [main] hr6.UserDao       ( UserDao.java:115)     - sql:
+DELETE FROM users WHERE u_id = ? 
+
+2018-11-03 15:41:58,155 DEBUG [main] hr6.UserDao       ( UserDao.java:123)     - flag:
+1
+2018-11-03 15:41:58,157 DEBUG [main] hr6.Main          (    Main.java:51)     - ===================================
+2018-11-03 15:41:58,158 DEBUG [main] hr6.Main          (    Main.java:52)     - 제거 성공 del result=1
+2018-11-03 15:41:58,158 DEBUG [main] hr6.Main          (    Main.java:53)     - ===================================

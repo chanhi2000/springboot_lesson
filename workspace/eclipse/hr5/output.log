@@ -1,0 +1,21 @@
+2018-11-03 15:27:53,229 DEBUG [main] hr5.UserDao       ( UserDao.java:44)     - sql:
+INSERT INTO users (u_id, name, password) VALUES (?,?,?) 
+
+2018-11-03 15:27:53,293 DEBUG [main] hr5.UserDao       ( UserDao.java:54)     - flag:
+1
+2018-11-03 15:27:53,315 DEBUG [main] hr5.UserDao       ( UserDao.java:74)     - sql:
+SELECT * FROM users WHERE u_id = ? 
+
+2018-11-03 15:27:53,325 DEBUG [main] hr5.UserDao       ( UserDao.java:93)     - user:
+User [u_id=mmmark_110, name=이찬희, password=1224]
+2018-11-03 15:27:53,327 DEBUG [main] hr5.Main          (    Main.java:36)     - ===================================
+2018-11-03 15:27:53,327 DEBUG [main] hr5.Main          (    Main.java:37)     - 등록 성공
+2018-11-03 15:27:53,329 DEBUG [main] hr5.Main          (    Main.java:38)     - ===================================
+2018-11-03 15:27:53,347 DEBUG [main] hr5.UserDao       ( UserDao.java:115)     - sql:
+DELETE FROM users WHERE u_id = ? 
+
+2018-11-03 15:27:53,349 DEBUG [main] hr5.UserDao       ( UserDao.java:123)     - flag:
+1
+2018-11-03 15:27:53,350 DEBUG [main] hr5.Main          (    Main.java:50)     - ===================================
+2018-11-03 15:27:53,351 DEBUG [main] hr5.Main          (    Main.java:51)     - 제거 성공 del result=1
+2018-11-03 15:27:53,351 DEBUG [main] hr5.Main          (    Main.java:52)     - ===================================

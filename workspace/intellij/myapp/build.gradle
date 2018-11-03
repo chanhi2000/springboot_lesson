@@ -1,0 +1,21 @@
+apply from: 'dependencies.gradle'
+
+allprojects {
+	buildscript {
+		repositories {
+			mavenCentral()
+		}
+		dependencies {
+			classpath dep.springBootClasspath
+		}
+	}
+	
+	repositories {
+		jcenter()
+		mavenCentral()
+		maven {
+			url {  "http://www.datanucleus.org/downloads/maven2"  }
+		}
+	}
+}
+
