@@ -14,5 +14,7 @@ sourceSets {
 
 dependencies {
     implementation dep.log4j
+    implementation dep.springContext
+    implementation dep.ojdbc6
     testImplementation dep.junit
 }
