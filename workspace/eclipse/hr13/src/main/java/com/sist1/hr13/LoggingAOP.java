@@ -12,7 +12,7 @@ public class LoggingAOP {
 		Signature method = joinPoint.getSignature();
 		String methodName = method.getName();
 		log.debug(">>>>>--------------------");
-		log.debug(methodName+"is calling");
+		log.debug(methodName+" is calling");
 		log.debug(">>>>>--------------------");
 	}
 }

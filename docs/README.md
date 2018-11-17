@@ -38,7 +38,7 @@ D:\....\> mvn spring-boot:run
 or
 ```cmd
 D:\....\...\com\example\myapp\>spring run *.java
-
+```
 
 ## Spring 기본정리
 - OOP: 
@@ -88,10 +88,81 @@ transaction: crossscutting
 #### Advice
 어드바이스는 횡단 관심에 해당하는 공통 기능코드
 
+|에노테이션|역할|
+|:-------:|:--:|
+| Before | 비즈니스 메소드 실행전 |
+| After | 비즈니스 메소드 실행후 무조건 실행 (try~cdatch~finally) finally에 해당
+| After_returning | 비즈니스 메소드 성공적으로 리턴되면 동작 |
+| After_throwing | 비즈니스 메소드 실행중 예외가 발생하면 동작 |
+| around | 메소드 호출 자체를 가로채 비즈니스 메소드 실행 전후에 처리할 로직 | 
+
 #### Weaving
 포인트컷으로 지정한 핵심 관심 메소드가 호출 될 때, 어드바이스에 해당하는 횡단 메소드가 삽이되는 과정.
 
 
 #### Aspect / Advisor
 PointCut 과 Advice 의 결합
+
+#### `*` 포인트컷 표현식: 
+>> 예 : `* com.sist.hr..*Dao.*(..)
+
+####### 1. 리턴타입
+
+| 표현식 | 설명 |
+|:-----:|:-----|
+| `*` | 모든 리턴타입 |
+| `void` | 리턴타입이 void인 메소드 선택 |
+| `!void`| 리턴타입이 void가 아닌 메소드 선택 | 
+
+
+###### 2. 페키지 지정
+| 표현식 | 설명 |
+|:-----:|:-----|
+| `com.sist.hr` | `com.sist.hr` 만 선택 |
+| `com.sist.hr..` | `com.sist.hr`패키지로 시작하는 모든  패키지 | 
+| `com.sis.hr..Impl` | `com.sis.hr`패키지로 시작하고 마지막 패키지 이름이 Impl로 끝나느 패키지 
+
+###### 3. 클래스
+| 표현식 | 설명 |
+|:-----:|:-----|
+| `BoardServiceImpl` | `BoardServiceImpl`만 선택 |
+| `*Impl` | 클래스 명칭이 `Impl`로 끝나는 클래스 |
+| `BoardService+` | 해당 클래스로 부터 파생된 모든 자식 클래스 |
+
+
+###### 4. 메소드
+| 표현식 | 설명 |
+|:-----:|:-----|
+| `*(..)` | 모든 메소드 |
+| `*Tx(..)` | 명칭이 `Tx`로 끝나는 모든 메소드 선택  |
+
+
+###### 5. 매개 변수
+| 표현식 | 설명 |
+|:-----:|:-----|
+| `(..)` | 모든 매개변수 |
+| `(*)` | 1개의 매개변수를 가지는 |
+| `(com.sist.hr.UserVO)` | `UserVO`만 가지고 있는 |  
+| `(!com.sist.hr.UserVO)` | `UserVO`가 아닌 |  
+
+
+
+## 태이블 속성 수정
+|column|type|설정|
+|:-----|:---|:---|
+|u_id|`varchar2(10)`|`pk`|
+|name|`varchar2(10)`|`not null`|
+|password|`varchar2(10)`|`not null`|
+|h_Level|`number(2)`|`not null`|
+|login|`number(7)`|`not null`|
+|recommend|`number(7)`|`not null`|
+|email|`varchar2(200)`|`not null`|
+|reg_dt|`date`|`not null`|
+
+>> 사용자의 레벨: 
+>> - Basic:  사용자 처음 로그인 하면 
+>> - Silver: 가입 후 로그인 횟수 50번 이상
+>> - Gold: 	Silver에서 추천을 30회 이상 받으면
+
+
 

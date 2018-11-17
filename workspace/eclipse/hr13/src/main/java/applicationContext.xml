@@ -19,7 +19,6 @@
 	<aop:config>
 		<aop:aspect ref="loggingAOP" order="1">
 			<aop:before method="logging" pointcut="execution(* com.sist1.hr13.MemberDao.*(..))"/>
-			
 		</aop:aspect>
 	</aop:config>
 	
